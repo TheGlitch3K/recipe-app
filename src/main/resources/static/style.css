@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+section{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: rgb(26, 26, 27);
+    background-image: url("foodapp.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.recipe-container{
+    width: 90%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.recipe-brand {
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(26, 24, 24);
+    margin-bottom: 30px;
+}
+
+.nav-bar{
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.nav-bar ul {
+    list-style: none;
+}
+
+.nav-bar li {
+    display: inline;
+    font-size: 2rem;
+    padding: 12px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+}
+
+.recipe-search{
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: rgb(223, 223, 223);
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+.recipe-search input{
+    width: 90%;
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    display: inline-block;
+}
+
+.recipe-search button{
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    height: 34px;
+    width: 34px;
+    background-color: rgb(223, 223, 223);
+    color: black;
+    transition: 0.2s ease-in-out;
+    padding-right: 12px;
+}
+
+button:hover {
+    background: #7c7c7c6b;
+}
+
+/* come back to this */
+#recipe-result{
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+    grid-gap: 25px;
+    grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+    overflow: hidden;
+}
+
+.recipe-item{
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgb(37, 37, 37);
+    padding: 15px;
+    overflow: hidden;
+}
+
+.recipe-item img{
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
+}
+
+.recipe-item .flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe-item .title{
+    color: whitesmoke;
+    margin: 20px 10px 0 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.recipe-button{
+    text-decoration: none;
+    text-align: center;
+    width: 130px;
+    padding: 10px 0;
+    background-color: rgb(70, 65, 65);
+    color: whitesmoke;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    align-self: flex-start;
+}
+
+.recipe-info{
+    color: whitesmoke;
+    display: block;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    letter-spacing: .05rem;
+    line-height: 2rem;
+}

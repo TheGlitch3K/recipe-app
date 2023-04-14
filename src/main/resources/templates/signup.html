@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Create User Account</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="/css/common.css" rel="stylesheet">
+</head>
+<body class="container  body-content">
+<h1>Create User Account</h1>
+
+<form  method="post" th:action="@{/signup_process}"   style="max-width:600px;">
+<div class="form-group">
+    <label th:for="users"> User Name </label>
+    <input type="text" th:field="${users.username}"th:required="required" class="form-control" placeholder=" User Name">
+    <span th:errors="${users.username}" class="error"></span>
+</div>
+   <div class="form-group">
+       <label th:for="users"> Email </label>
+       <input type="email" th:field="${users.email}"th:required="required" class="form-control" placeholder="Email">
+       <span th:errors="${users.email}" class="error"></span>
+   </div>
+    <div class="form-group">
+        <label th:for="users"> Password </label>
+        <input type="password" th:field="${users.password}"th:required="required" class="form-control" placeholder="Password">
+        <span th:errors="${users.password}" class="error"></span>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+    <a th:href="@{'login'}">Already Registered!Login here</a>
+</form>
+
+</body>
+</html>
+
+

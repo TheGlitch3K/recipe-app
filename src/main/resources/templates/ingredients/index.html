@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+<div ></div>
+<div class="container body-content " >
+    <header th:replace="fragments :: header"></header>
+    <br>
+    <br>
+    <br>
+    <h1 th:text = "'Welcome ' + ${username} + '!'"></h1>
+    <h2>My ingredients</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Ingredients</th>
+            <th>Quantity</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="addIngredients:${ingredients}">
+            <td th:text="${addIngredients.ingredient}">Ingredients</td>
+            <td th:text="${addIngredients.quantity}">Quantity</td>
+            <td><a th:href="@{'/ingredients/edit/' + ${addIngredients.id}}">Edit</a></td>
+            <td><a th:href="@{'/ingredients/delete/' + ${addIngredients.id}}" th:onclick="confirmDelete()" >Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{'/ingredients/add'}">Add Ingredients</a>
+</div>
+</body>
+</html>

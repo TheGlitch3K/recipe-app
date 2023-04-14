@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head ></head>
+
+<body class="container  body-content">
+<header th:replace="fragments :: header"></header>
+<h1 th:text="${'Add Ingredients: ' + ingredients.name}">Default Title</h1>
+
+<nav th:replace="fragments :: page-header"></nav>
+
+<div class="job-listing">
+    <p th:text="${'Name: ' + ingredients.name}"></p>
+<input type="text" th:field="${ingredients.name}" />
+    <p th:text="${'Description: ' + ingredients.description}"></p>
+</div>
+</body>
+</html>

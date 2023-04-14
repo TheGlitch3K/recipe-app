@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body class="container  body-content">
+<header th:replace="fragments :: header"></header>
+<br>
+<br>
+<br>
+<h1>Delete Ingredient</h1>
+<nav></nav>
+<form method="post" action="/ingredients/delete" style="max-width:600px;">
+    <div class="form-group">
+        <label th:for="ingredients">Ingredient Name</label>
+        <input  type="text" class="form-control" th:field="${ingredients.ingredient}" />
+        <span th:errors="${ingredients.ingredient}" class="error"></span>
+        <label th:for="ingredients">Quantity</label>
+        <input  type="text" class="form-control" th:field="${ingredients.quantity}" />
+        <span th:errors="${ingredients.quantity}" class="error"></span>
+    </div>
+    <input type="hidden" th:value="${ingredients.id}" name="addIngredientsId" />
+    <input type="submit" value="Delete Ingredient" />
+</form>
+</body>
+</html>
